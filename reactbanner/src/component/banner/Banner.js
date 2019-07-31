@@ -9,6 +9,8 @@ class Banner extends React.Component {
     this.state = {
       imgSrc: '',
       buttonText: '',
+      imgTitle: '',
+      imgAlt: '',
     }
   }
   componentDidMount = () => {

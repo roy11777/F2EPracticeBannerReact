@@ -32,7 +32,6 @@ class Mainpage extends React.Component {
       bannerStatus: status,
     })
 
-    // --------------------下方判斷式精簡寫法-----------------------------
     const transitinoInterval = setInterval(this.handleTransition, 15)
     this.setState({ bannerClass: status ? 'closing' : 'opening' })
 
@@ -42,32 +41,7 @@ class Mainpage extends React.Component {
         this.setState({ bannerClass: status ? 'closed' : 'opened' })
         clearInterval(transitinoInterval)
       }.bind(this)
-      // 綁到此component
     )
-    //  -----------------------------------------------------------------
-    // if (status) {
-    //   // if
-    //   this.handleTransition()
-    //   this.setState({ bannerClass: 'closing' })
-    //   eleBanner.addEventListener(
-    //     'transitionend',
-    //     function() {
-    //       console.log('123')
-    //       this.setState({ bannerClass: 'closed' })
-    //     }.bind(this)
-    //   )
-    // } else {
-    //   this.handleTransition()
-    //   this.setState({ bannerClass: 'opening' })
-    //   eleBanner.addEventListener(
-    //     'transitionend',
-    //     function() {
-    //       console.log('456')
-    //       this.setState({ bannerClass: 'opened' })
-    //     }.bind(this)
-    //   )
-    // }
-    // console.log(status)
   }
 
   render() {
