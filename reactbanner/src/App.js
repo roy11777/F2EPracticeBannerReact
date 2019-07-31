@@ -1,22 +1,15 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Mainpage from './pages/Mainpage'
 
 function App() {
   return (
-    <div class="banner">
-      <div>
-        <a className="wrap" href="#">
-          <img
-            class="img"
-            src="./imgs/big.jpg"
-            title="輸入廣告促銷說明文字"
-            alt="輸入廣告促銷說明文字"
-          />
-        </a>
-        <button></button>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Mainpage} />
+      </Switch>
+    </Router>
   )
 }
 
