@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
+import background from '../../images/big.jpg'
 
 class Banner extends React.Component {
   constructor(props) {
     // console.log(props)
     super()
     this.state = {
-      imgSrc: '',
       buttonText: '',
       imgTitle: '',
       imgAlt: '',
@@ -15,8 +15,6 @@ class Banner extends React.Component {
   }
   componentDidMount = () => {
     this.setState({
-      imgSrc: '/images/big.jpg',
-      buttonText: '收合',
       imgTitle: '輸入廣告促銷說明文字',
       imgAlt: '輸入廣告促銷說明文字',
     })
@@ -28,7 +26,7 @@ class Banner extends React.Component {
         <Link className="" to="#">
           <img
             className=""
-            src={this.state.imgSrc}
+            src={background}
             title={this.state.imgTitle}
             alt={this.state.imgAlt}
           />
