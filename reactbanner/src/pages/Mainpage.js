@@ -1,7 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 import Banner from '../component/banner/Banner'
-import '../main.scss'
 
 class Mainpage extends React.Component {
   constructor() {
@@ -9,7 +7,6 @@ class Mainpage extends React.Component {
     // 預設banner開啟狀態
     this.bannerDefaultOpen = true
     this.state = {
-      imgSrc: '',
       bannerStatus: this.bannerDefaultOpen ? false : true,
       bannerClass: this.bannerDefaultOpen ? 'opened' : 'closed',
     }
@@ -49,7 +46,6 @@ class Mainpage extends React.Component {
       <>
         <div className={this.state.bannerClass + ' banner'}>
           <Banner
-            BannerimgSrc={this.state.imgSrc}
             BannerStatus={this.state.bannerStatus}
             BannerToggle={this.bannerToggle}
           />
